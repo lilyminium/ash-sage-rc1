@@ -145,11 +145,15 @@ def cmiles_to_inchi(cmiles: str) -> str:
 
 def single_process_optimization(item):
     record, molecule, cmiles, dataset_name = item
-    if not record.status.upper() == "COMPLETE":
-        return
-    if not ConnectivityFilter()._filter_function(None, None, molecule):
-        return
-    if not UnperceivableStereoFilter()._filter_function(None, None, molecule):
+    try:
+        if not record.status.upper() == "COMPLETE":
+            return
+        if not ConnectivityFilter()._filter_function(None, None, molecule):
+            return
+        if not UnperceivableStereoFilter()._filter_function(None, None, molecule):
+            return
+    # can have some rdkit connection errors
+    except:
         return
 
     try:
