@@ -1,0 +1,12 @@
+stored_data/
+min_stored_data.tar.gz
+
+*.out
+optimize.tmp
+logs/
+result.0
+*.png
+*.sav
+targets/
+
+*.ipynb
