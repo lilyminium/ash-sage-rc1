@@ -1,3 +1,11 @@
+"""
+This script runs through a set of tables containing torsion drive data
+and labels each of them with the appropriate force field parameters.
+It saves the labeled data in a specified output directory.
+
+This step is needed for the data selection process.
+"""
+
 import logging
 import sys
 
@@ -135,7 +143,7 @@ def label_torsion_table_with_forcefield(
     "-o",
     type=click.Path(exists=False, file_okay=False, dir_okay=True),
     default="parameters/torsions",
-    help="Directory to save the labeled tables."
+    help="Directory to save the labeled parameters."
 )
 @click.option(
     "--forcefield-file",

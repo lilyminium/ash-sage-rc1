@@ -1,3 +1,13 @@
+"""
+This script runs through a set of tables containing optimization data
+and labels each of them with the appropriate force field parameters.
+It saves the labeled data in a specified output directory.
+
+This step is needed for the data selection process.
+
+Note: only bonds, angles, and proper and improper torsions are labeled.
+"""
+
 import logging
 import sys
 
@@ -13,8 +23,6 @@ import pyarrow.parquet as pq
 import pyarrow.dataset as ds
 
 from openff.toolkit import Molecule, ForceField
-from yammbs.checkmol import analyze_functional_groups, ChemicalEnvironment
-from rdkit import Chem
 
 
 logger = logging.getLogger(__name__)
