@@ -337,20 +337,20 @@ def main(
         pq.write_table(table, table_file)
         print(f"Saved {table_file}")
 
-    # download torsiondrives
-    td_directory = output_directory / "torsiondrive"
-    td_directory.mkdir(parents=True, exist_ok=True)
-    for dsname in tqdm.tqdm(TORSIONDRIVE_WHITELISTS, desc="Downloading TorsionDrives"):
-        table = download_torsiondrive(client, dsname)
-        if dsname in IGNORE_IODINE:
-            df = table.to_pandas()
-            mask = np.array(["I" in smi for smi in df.smiles.values])
-            df = pd.DataFrame(df[~mask])
-            table = pa.Table.from_pandas(df)
+    # # download torsiondrives
+    # td_directory = output_directory / "torsiondrive"
+    # td_directory.mkdir(parents=True, exist_ok=True)
+    # for dsname in tqdm.tqdm(TORSIONDRIVE_WHITELISTS, desc="Downloading TorsionDrives"):
+    #     table = download_torsiondrive(client, dsname)
+    #     if dsname in IGNORE_IODINE:
+    #         df = table.to_pandas()
+    #         mask = np.array(["I" in smi for smi in df.smiles.values])
+    #         df = pd.DataFrame(df[~mask])
+    #         table = pa.Table.from_pandas(df)
 
-        table_file = td_directory / f"{dsname}.parquet"
-        pq.write_table(table, table_file)
-        print(f"Saved {table_file}")
+    #     table_file = td_directory / f"{dsname}.parquet"
+    #     pq.write_table(table, table_file)
+    #     print(f"Saved {table_file}")
 
     
         
