@@ -16,3 +16,5 @@ The expected outputs are:
 
 - output/*.json files -- containing the training set torsions or optimizations
 - counts/*.json files -- containing how many molecules matched per parameter
+
+Please see `run-select.sh` for example of use. Each script also has a short docstring.
