@@ -75,10 +75,8 @@ def get_ddEs(
         ].values.min()
         assert len(subdf[subdf.ff_energy == lowest_ff_energy]) == 1, \
             "There should be only one conformer with the lowest energy"
-        lowest_energy_ff_id: int = subdf.loc[
-            subdf.ff_energy == lowest_ff_energy,
-            "ff_qcarchive_id"
-        ]
+        lowest_energy_ff_id: int = subdf[subdf.ff_energy == lowest_ff_energy]["ff_qcarchive_id"].values[0]
+        
         logger.info(
             f"Lowest energy conformer ID for {inchi}: {lowest_energy_ff_id} ({ff}) -> "
             f"{lowest_energy_qm_id} (QM)"
