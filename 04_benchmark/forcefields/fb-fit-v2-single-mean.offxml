@@ -3,7 +3,8 @@
     <Author>The Open Force Field Initiative</Author>
     <Date>2024-09-11</Date>
     <Constraints version="0.3">
-        <Constraint smirks="[#1:1]-[*:2]" id="c1"></Constraint>
+	<Constraint smirks="[#1:1]-[*:2]" id="c1"></Constraint>
+	<Constraint smirks="[#1:1]-[#8X2H2+0:2]-[#1]" id="c-tip3p-H-O" distance="0.9572 * angstrom ** 1"></Constraint>
         <Constraint smirks="[#1:1]-[#8X2H2+0]-[#1:2]" id="c-tip3p-H-O-H" distance="1.5139006545247014 * angstrom ** 1"></Constraint>
     </Constraints>
     <Bonds version="0.4" potential="harmonic" fractional_bondorder_method="AM1-Wiberg" fractional_bondorder_interpolation="linear">
@@ -425,7 +426,7 @@
         <Atom smirks="[#1:1]-[#6X3](~[#7,#8,#9,#16,#17,#35])~[#7,#8,#9,#16,#17,#35]" epsilon="0.01520430659951 * mole ** -1 * kilocalorie ** 1" id="n9" rmin_half="1.3823926168 * angstrom ** 1"></Atom>
         <Atom smirks="[#1:1]-[#6X2]" epsilon="0.015 * mole ** -1 * kilocalorie ** 1" id="n10" rmin_half="1.459 * angstrom ** 1"></Atom>
         <Atom smirks="[#1:1]-[#7]" epsilon="0.01286994860654 * mole ** -1 * kilocalorie ** 1" id="n11" rmin_half="0.6249682932379 * angstrom ** 1"></Atom>
-        <Atom smirks="[#1:1]-[#8]" epsilon="0.0 * mole ** -1 * kilocalorie ** 1" id="n12" rmin_half="0.300000000004 * angstrom ** 1"></Atom>
+        <Atom smirks="[#1:1]-[#8]" epsilon="0.00001 * mole ** -1 * kilocalorie ** 1" id="n12" rmin_half="0.300000000004 * angstrom ** 1"></Atom>
         <Atom smirks="[#1:1]-[#16]" epsilon="0.0157 * mole ** -1 * kilocalorie ** 1" id="n13" rmin_half="0.6 * angstrom ** 1"></Atom>
         <Atom smirks="[#6:1]" epsilon="0.09031230623308 * mole ** -1 * kilocalorie ** 1" id="n14" rmin_half="1.977945375636 * angstrom ** 1"></Atom>
         <Atom smirks="[#6X2:1]" epsilon="0.2100571058251 * mole ** -1 * kilocalorie ** 1" id="n15" rmin_half="1.901100554743 * angstrom ** 1"></Atom>
