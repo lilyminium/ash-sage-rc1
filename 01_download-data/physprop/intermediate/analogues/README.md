@@ -1,6 +1,6 @@
 # Side chain analogues
 
-We find ~1k side-chain analogues for asp, lys, phe, ser, thr, tyr. Most of these are for threonine (ethanol) (451 properties). Most of these are densities (826). There are 293 enthalpies of mixing.
+We find ~1.1k side-chain analogues for asp, lys, phe, ser, thr, tyr, glu. Most of these are for threonine (ethanol) (451 properties). Most of these are densities (826). There are 293 enthalpies of mixing.
 
 The notebook has the code used to generate the CSV. The analogue SMILES are pasted below.
 
@@ -25,6 +25,6 @@ SIDE_CHAIN_ANALOGS = {
     "cys": "CS",
     "tyr": "Cc1ccc(O)cc1",
     "asn": "CC(=O)N",
-    "glu": "CCC(=O)N",
+    "gln": "CCC(=O)N",
 }
 ```
